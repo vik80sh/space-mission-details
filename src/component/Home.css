@@ -1,0 +1,132 @@
+.home-wrapper {
+    padding-top: 50px;
+    margin: 0;
+}
+
+.home-wrapper .filter-section {
+    background-color: #ffffff;
+    padding: 10px 10px 20px;
+}
+
+.home-wrapper .filter-section .button-selected {
+    background-color: green;
+}
+
+.home-wrapper .filter-section .filter-title {
+    border-bottom: 1px solid gray;
+    width: 100%;
+    margin: 0 30px;
+    font-size: 16px;
+}
+
+.home-wrapper .filter-section .successfull-launch {
+    padding-top: 25px !important;
+}
+.mission-details{
+    margin-bottom: -10px;
+}
+.mission-details .card-wrapper {
+    padding: 0;
+}
+
+.mission-details .card-wrapper .card-container {
+    float: left;
+    margin: 0 5px 10px;
+    padding: 15px;
+    background-color: #ffffff;
+}
+
+.mission-details .card-wrapper .card-container p {
+    padding: 0;
+    margin: 0;
+    padding-bottom: 5px;
+}
+
+.card-wrapper .card-container .image-wrapper {
+    background-color: silver;
+}
+
+.card-wrapper .card-container .image-wrapper img {
+    width: 100%;
+    height: 100%;
+}
+
+.mission-name {
+    padding-top: 10px !important;
+    color: cornflowerblue;
+}
+
+.mission-id {
+    padding-bottom: 0 !important;
+}
+
+.mission-id-res {
+    margin: 0 5px 0 15px;
+    padding-bottom: 10px;
+    color: blueviolet;
+}
+
+p span {
+    color: blueviolet;
+}
+
+.spinner-loading{
+    margin-top: 50px;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 0;
+    bottom: 0;
+  }
+
+  .loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #aedb34;
+    width: 100px;
+    height: 100px;
+    -webkit-animation: spin 2s linear infinite;
+    /* Safari */
+    animation: spin 2s linear infinite;
+    margin: 0 auto;
+  }
+
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+@media (max-width:  575px) {
+    .home-wrapper .filter-section {
+        margin-bottom: 10px;
+    }
+
+    .home-wrapper .filter-section .filter-title {
+        font-size: 24px;
+    }
+
+    .mission-details {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .mission-details .card-wrapper .card-container {
+        margin: 10px 0;
+    }
+}

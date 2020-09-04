@@ -1,0 +1,17 @@
+.container-fluid{
+    background-color: darkgrey;
+    padding: 15px;
+}
+.container-fluid h1{
+    padding: 35px 15px;
+}
+.row{
+    margin: 0 !important;
+    padding:0 !important;
+}
+.developer-name{
+    text-align: center;
+    font-size: 18px;
+    padding-top: 20px;
+    color: red;
+}
