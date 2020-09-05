@@ -5,9 +5,9 @@ import express from 'express'
 import React from 'react'
 import ReactDOMServer from 'react-dom/server'
 
-import App from '../src/App'
+import App from './src/App'
 
-const PORT = 8080
+const PORT =  process.env.PORT || 8000;
 const app = express()
 
 const router = express.Router()
@@ -29,13 +29,12 @@ const serverRenderer = (req, res, next) => {
 router.use('^/$', serverRenderer)
 
 router.use(
-  express.static(path.resolve(__dirname, '..', 'build'), { maxAge: '30d' })
+  express.static(path.resolve(__dirname, '.', 'build'), { maxAge: '30d' })
 )
 
 // tell the app to use the above rules
 app.use(router)
 
-// app.use(express.static('./build'))
 app.listen(PORT, () => {
   console.log(`SSR running on port ${PORT}`)
 })

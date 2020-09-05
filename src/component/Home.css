@@ -71,7 +71,7 @@ p span {
 }
 
 .spinner-loading{
-    margin-top: 50px;
+    margin-top: 70px;
     width: 100%;
     position: absolute;
     z-index: 1;
@@ -128,5 +128,19 @@ p span {
 
     .mission-details .card-wrapper .card-container {
         margin: 10px 0;
+    }
+    .loader {
+        border: 16px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 16px solid red;
+    }
+    .custom-btn{
+        margin-top: 5px;
+        width: 100px;
+        padding: 7px;
+        font-size: 18px;
+    }
+    .spinner-loading{
+        margin-top: 90px;
     }
 }

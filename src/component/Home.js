@@ -129,19 +129,21 @@ export default class Home extends Component {
     render() {
         return (
             <section className="row home-wrapper">
-                {this.state.loader && <div class="spinner-loading"><div className="loader"></div></div>}
-                <div className="col-12 col-sm-4 col-md-3 col-lg-2 filter-section">
-                    <h3>Filters</h3>
-                    {this.missionYearUI()}
-                    {this.successfulLaunchUI()}
-                    {this.successfullLandUI()}
+                {this.state.loader && <div className="spinner-loading"><div className="loader"></div></div>}
+                <div className="col-12 col-sm-4 col-md-3 col-lg-2">
+                    <div className="filter-section">
+                        <h3>Filters</h3>
+                        {this.missionYearUI()}
+                        {this.successfulLaunchUI()}
+                        {this.successfullLandUI()}
+                    </div>
                 </div>
                 <div className="col-12 col-sm-8 col-md-9 col-lg-10  mission-details">
                     <div className="row card-wrapper">
-                        {this.cardUI()}
+                        {this.state.flightData && this.state.flightData.length > 0 ? this.cardUI() : <h1>No Result found</h1>}
                     </div>
                 </div>
-               
+
             </section>
         )
     }
