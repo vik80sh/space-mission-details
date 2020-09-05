@@ -81,9 +81,9 @@ p span {
   }
 
   .loader {
-    border: 16px solid #f3f3f3;
+    border: 16px solid #ea0f0f;
     border-radius: 50%;
-    border-top: 16px solid #aedb34;
+    border-top: 16px solid #2223c3;
     width: 100px;
     height: 100px;
     -webkit-animation: spin 2s linear infinite;

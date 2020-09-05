@@ -118,7 +118,7 @@ export default class Home extends Component {
                     </div>
                     <p className="mission-name"><b>{data.mission_name} </b> </p>
                     <p className="mission-id"><strong>Mission Ids </strong> </p>
-                    <li className="mission-id-res">{data.mission_id.length ? data.mission_id[0] : "Not Present"}</li>
+                    <ol><li className="mission-id-res">{data.mission_id.length ? data.mission_id[0] : "Not Present"}</li></ol>
                     <p className="launch-year"><strong>Launch Year : </strong><span>{data.launch_year}</span></p>
                     <p className="success"><strong>Successfull Launch : </strong><span>{data.launch_success ? "true" : "false"}</span></p>
                     <p className="landing"><strong>Successfull Landing : </strong><span>{data.rocket.first_stage.cores[0].land_success ? "true" : "false"}</span></p>
