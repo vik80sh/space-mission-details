@@ -1,0 +1,33 @@
+@import './variable.scss';
+
+$sm-min-width: 325px;
+$sm-max-width: 700px;
+$md-min-width: 701px;
+$md-max-width: 1024px;
+$lg-min-width: 1025px;
+$lg-max-width: 1440px;
+$Xlg-min-width: 1441px;
+
+@mixin mobile {
+    @media (max-width: #{$sm-max-width}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$md-min-width}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$lg-min-width}) {
+        @content;
+    }
+}
+
+@mixin desktoplarge {
+    @media (min-width: #{$xlg-min-width}) {
+        @content;
+    }
+}

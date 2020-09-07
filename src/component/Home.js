@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import CustomButton from './../atoms/CustomButton';
 import { APIs } from './../constant';
 import axios from 'axios'
-import './Home.css'
+import './Home.scss'
 
 export default class Home extends Component {
     constructor(props) {
@@ -36,9 +36,9 @@ export default class Home extends Component {
         if (year) {
             yearFilter = '&launch_year=' + year;
             if (this.state.isSuccessfulLaunch)
-                launchingFilter = 'launch_success=' + this.state.isSuccessfulLaunch
+                launchingFilter = '&launch_success=' + this.state.isSuccessfulLaunch
             if (this.state.isSuccessfullLand)
-                landingFilter = 'land_success=' + this.state.isSuccessfullLand
+                landingFilter = '&land_success=' + this.state.isSuccessfullLand
             if (this.state.selectedYear === year) {
                 year = "";
                 yearFilter = "";
@@ -65,7 +65,7 @@ export default class Home extends Component {
                 this.setState({ flightData: res.data, loader: false, isSuccessfulLaunch: successfullLaunching })
             })
         } else {
-            landingFilter = '&launch_success=' + successfullLanding;
+            landingFilter = '&land_success=' + successfullLanding;
             if (this.state.selectedYear)
                 yearFilter = '&launch_year=' + this.state.selectedYear;
             if (this.state.isSuccessfulLaunch)
@@ -80,6 +80,7 @@ export default class Home extends Component {
                 this.setState({ flightData: res.data, loader: false, isSuccessfullLand: successfullLanding })
             })
         }
+        console.log("- url - ", url)
     }
     missionYearUI() {
         return <div className="row">
@@ -111,10 +112,9 @@ export default class Home extends Component {
 
     cardUI() {
         return this.state.flightData.map((data, i) => {
-            return <div className="col-12 col-sm-6 col-md-4 col-lg-3 d-flex align-items-stretch card-wrapper" key={i}>
-                <div className="card-container">
+            return <div className="align-items-stretch card-conatiner" key={i}>
                     <div className="image-wrapper">
-                        <img src={data.links.mission_patch} alt={data.mission_name + "image"} />
+                        <img src={data.links.mission_patch} alt={"name " + data.mission_name} />
                     </div>
                     <p className="mission-name"><b>{data.mission_name} </b> </p>
                     <p className="mission-id"><strong>Mission Ids </strong> </p>
@@ -122,8 +122,8 @@ export default class Home extends Component {
                     <p className="launch-year"><strong>Launch Year : </strong><span>{data.launch_year}</span></p>
                     <p className="success"><strong>Successfull Launch : </strong><span>{data.launch_success ? "true" : "false"}</span></p>
                     <p className="landing"><strong>Successfull Landing : </strong><span>{data.rocket.first_stage.cores[0].land_success ? "true" : "false"}</span></p>
-                </div>
             </div>
+
         })
     }
     render() {

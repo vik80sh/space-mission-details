@@ -1,0 +1,157 @@
+@import './../BasicStyle/mixing.scss';
+
+.home-wrapper {
+    padding-top: 50px;
+    margin: 0;
+
+    .filter-section {
+        background-color: #ffffff;
+        padding: 10px 10px 20px;
+
+        .text-center{
+            padding: 0 3px;
+        }
+        .button-selected {
+            background-color: green;
+        }
+
+        .filter-title {
+            border-bottom: 1px solid gray;
+            width: 100%;
+            margin: 0 30px;
+            font-size: 16px;
+        }
+
+        .successfull-launch {
+            padding-top: 25px !important;
+        }
+    }
+
+    .mission-details {
+        margin-bottom: -10px;
+
+        .card-wrapper {
+            padding: 10px 0 0 0 !important;
+
+            @include tablet {
+                padding: 0 !important;
+                display: flex;
+                justify-content: center;
+            }
+            @include desktop {
+                padding: 0 !important;
+            }
+
+            .card-conatiner {
+                float: left;
+                margin: 0 0px 10px;
+                padding: 15px;
+                background-color: #ffffff;
+
+                @include tablet {
+                    flex-basis: 46%;
+                    margin: 0 5px 10px;
+                }
+
+                @include desktop {
+                    flex-basis: 23%;
+                    margin: 0 5px 10px;
+
+                }
+
+                p {
+                    padding: 0;
+                    margin: 0;
+                    padding-bottom: 5px;
+                }
+
+                .image-wrapper {
+                    background-color: silver;
+                    height: 320px;
+
+                    @include tablet {
+                        height: 330px;
+                    }
+
+                    @include desktop {
+                        height: 216px;
+                    }
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                }
+
+                .mission-name {
+                    padding-top: 10px !important;
+                    color: cornflowerblue;
+                }
+
+                .mission-id {
+                    padding-bottom: 0 !important;
+                }
+
+                ol {
+                    list-style-type: circle;
+                }
+
+                .mission-id-res {
+                    margin: 0 5px 0 15px;
+                    padding-bottom: 10px;
+                    color: blueviolet;
+                }
+            }
+
+        }
+    }
+
+    p span {
+        color: blueviolet;
+    }
+
+    .spinner-loading {
+        margin-top: 70px;
+        width: 100%;
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 0;
+        bottom: 0;
+    }
+
+    .loader {
+        border: 16px solid #ea0f0f;
+        border-radius: 50%;
+        border-top: 16px solid #2223c3;
+        width: 100px;
+        height: 100px;
+        -webkit-animation: spin 2s linear infinite;
+        /* Safari */
+        animation: spin 2s linear infinite;
+        margin: 0 auto;
+    }
+
+    /* Safari */
+    @-webkit-keyframes spin {
+        0% {
+            -webkit-transform: rotate(0deg);
+        }
+
+        100% {
+            -webkit-transform: rotate(360deg);
+        }
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+
+    }
+}
