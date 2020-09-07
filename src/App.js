@@ -6,8 +6,7 @@ function App() {
   return (
     <section className="container-fluid">
       <h1>SpacEx Launch Programs</h1>
-        <Home/>
-        
+        <Home/> 
         <div className="developer-name">Developed By <strong>Vikash Gupta, vik80sh@gmail.com</strong></div>
     </section>
   );

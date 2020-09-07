@@ -32,7 +32,7 @@ router.use(
   express.static(path.resolve(__dirname, '.', 'build'), { maxAge: '30d' })
 )
 
-// tell the app to use the above rules
+
 app.use(router)
 
 app.listen(PORT, () => {
