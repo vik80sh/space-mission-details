@@ -80,7 +80,6 @@ export default class Home extends Component {
                 this.setState({ flightData: res.data, loader: false, isSuccessfullLand: successfullLanding })
             })
         }
-        console.log("- url - ", url)
     }
     missionYearUI() {
         return <div className="row">
@@ -139,9 +138,9 @@ export default class Home extends Component {
                     </div>
                 </div>
                 <div className="col-12 col-sm-8 col-md-9 col-lg-10  mission-details">
-                    <div className="row card-wrapper">
+                   {!this.state.loader && <div className="row card-wrapper">
                         {this.state.flightData && this.state.flightData.length > 0 ? this.cardUI() : <h1>No Result found</h1>}
-                    </div>
+                    </div>}
                 </div>
 
             </section>
