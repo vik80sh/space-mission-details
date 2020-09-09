@@ -111,7 +111,7 @@ export default class Home extends Component {
 
     cardUI() {
         return this.state.flightData.map((data, i) => {
-            return <div className="align-items-stretch card-data" key={i}>
+            return <div className="card-data d-flex align-items-stretch" key={i}>
                 <div className="card-conatainer">
                     <div className="image-wrapper">
                         <img src={data.links.mission_patch} alt={"name " + data.mission_name} />
