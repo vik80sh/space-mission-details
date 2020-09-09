@@ -8,9 +8,10 @@
         background-color: #ffffff;
         padding: 10px 10px 20px;
 
-        .text-center{
+        .text-center {
             padding: 0 3px;
         }
+
         .button-selected {
             background-color: green;
         }
@@ -37,69 +38,79 @@
                 padding: 0 !important;
                 display: flex;
             }
+
             @include desktop {
                 padding: 0 !important;
             }
 
-            .card-conatiner {
-                float: left;
-                margin: 0 0px 10px;
-                padding: 15px;
-                background-color: #ffffff;
+            .card-data {
 
                 @include tablet {
-                    flex-basis: 46%;
-                    margin: 0 5px 10px;
+                    flex-basis: 50%;
                 }
 
                 @include desktop {
-                    flex-basis: 23%;
-                    margin: 0 5px 10px;
-
+                    flex-basis: 25%;
                 }
 
-                p {
-                    padding: 0;
-                    margin: 0;
-                    padding-bottom: 5px;
-                }
-
-                .image-wrapper {
-                    background-color: silver;
-                    height: 320px;
+                .card-conatainer {
+                    float: left;
+                    margin: 0 0px 10px;
+                    padding: 15px;
+                    background-color: #ffffff;
 
                     @include tablet {
-                        height: 330px;
+                        margin: 0 5px 10px;
                     }
 
                     @include desktop {
-                        height: 216px;
+                        margin: 0 5px 10px;
+
                     }
 
-                    img {
-                        width: 100%;
-                        height: 100%;
+                    p {
+                        padding: 0;
+                        margin: 0;
+                        padding-bottom: 5px;
                     }
 
-                }
+                    .image-wrapper {
+                        background-color: silver;
+                        height: 320px;
 
-                .mission-name {
-                    padding-top: 10px !important;
-                    color: cornflowerblue;
-                }
+                        @include tablet {
+                            height: 330px;
+                        }
 
-                .mission-id {
-                    padding-bottom: 0 !important;
-                }
+                        @include desktop {
+                            height: 216px;
+                        }
 
-                ol {
-                    list-style-type: circle;
-                }
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
 
-                .mission-id-res {
-                    margin: 0 5px 0 15px;
-                    padding-bottom: 10px;
-                    color: blueviolet;
+                    }
+
+                    .mission-name {
+                        padding-top: 10px !important;
+                        color: cornflowerblue;
+                    }
+
+                    .mission-id {
+                        padding-bottom: 0 !important;
+                    }
+
+                    ol {
+                        list-style-type: circle;
+                    }
+
+                    .mission-id-res {
+                        margin: 0 5px 0 15px;
+                        padding-bottom: 10px;
+                        color: blueviolet;
+                    }
                 }
             }
 

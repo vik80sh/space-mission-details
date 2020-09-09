@@ -111,7 +111,8 @@ export default class Home extends Component {
 
     cardUI() {
         return this.state.flightData.map((data, i) => {
-            return <div className="align-items-stretch card-conatiner" key={i}>
+            return <div className="align-items-stretch card-data" key={i}>
+                <div className="card-conatainer">
                     <div className="image-wrapper">
                         <img src={data.links.mission_patch} alt={"name " + data.mission_name} />
                     </div>
@@ -121,6 +122,7 @@ export default class Home extends Component {
                     <p className="launch-year"><strong>Launch Year : </strong><span>{data.launch_year}</span></p>
                     <p className="success"><strong>Successfull Launch : </strong><span>{data.launch_success ? "true" : "false"}</span></p>
                     <p className="landing"><strong>Successfull Landing : </strong><span>{data.rocket.first_stage.cores[0].land_success ? "true" : "false"}</span></p>
+                </div>
             </div>
 
         })
@@ -138,7 +140,7 @@ export default class Home extends Component {
                     </div>
                 </div>
                 <div className="col-12 col-sm-8 col-md-9 col-lg-10  mission-details">
-                   {!this.state.loader && <div className="row card-wrapper">
+                    {!this.state.loader && <div className="row card-wrapper">
                         {this.state.flightData && this.state.flightData.length > 0 ? this.cardUI() : <h1>No Result found</h1>}
                     </div>}
                 </div>
